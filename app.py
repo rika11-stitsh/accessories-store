@@ -1,3 +1,4 @@
+app = app
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -30,4 +31,5 @@ def confirm_order():
     return f"<h3>شكراً يا {name}! طلبك لـ ({product_name}) وصل، وهنتصل بيك على رقم {phone} لتأكيد التوصيل لعنوانك: {address}.</h3>"
 
 if __name__ == "__main__":
+
     app.run(debug=True, host='0.0.0.0') # عشان يفتح من الموبايل
