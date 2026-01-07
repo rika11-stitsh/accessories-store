@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>إتمام الطلب</title>
+</head>
+<body style="display: block; max-width: 500px; margin: auto;">
+    <h2>إتمام طلبك</h2>
+    <p>أنت تطلب الآن: <strong>{{ product.name }}</strong> بسعر {{ product.price }}</p>
+    
+    <form action="/confirm_order" method="POST" style="background: white; padding: 20px; border-radius: 10px;">
+        <input type="hidden" name="product_name" value="{{ product.name }}">
+        
+        <label>الاسم بالكامل:</label><br>
+        <input type="text" name="customer_name" required style="width: 100%; margin-bottom: 15px;"><br>
+        
+        <label>العنوان بالتفصيل:</label><br>
+        <textarea name="address" required style="width: 100%; margin-bottom: 15px;"></textarea><br>
+        
+        <label>رقم الموبايل:</label><br>
+        <input type="tel" name="phone" required style="width: 100%; margin-bottom: 20px;"><br>
+        
+        <button type="submit" class="buy-btn">تأكيد الطلب</button>
+    </form>
+</body>
+</html>
