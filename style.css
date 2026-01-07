@@ -1,0 +1,84 @@
+/* 1. إعدادات عامة لتناسب جميع الشاشات */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f4f9; /* لون خلفية هادئ */
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* 2. حاوية المنتجات (تخلي المنتجات تترص جنب بعض) */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. تصميم كارت المنتج (البرواز) */
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+/* حركة خفيفة لما الماوس ييجي على الكارت */
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. تنسيق الصورة (أهم جزء عشان يكون بروفيشنال) */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* عشان الصور متتمطش وتكون متناسقة */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* 5. اسم المنتج والسعر */
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product-card .price {
+    font-size: 1.1rem;
+    color: #d4af37; /* لون ذهبي راقي للبراند */
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* 6. زرار الشراء (Buy Now) */
+.buy-btn {
+    background-color: #000; /* أسود ملكي */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #444;
+}
