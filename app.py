@@ -1,8 +1,6 @@
-app = app
 from flask import Flask, render_template, request
-
 app = Flask(__name__)
-
+app = app
 products = [
     {"id": 1, "name": "Necklace", "price": "150 EGP", "image": "necklace.jpeg"},
     {"id": 2, "name": "Bracelet", "price": "100 EGP", "image": "bracelet.jpeg"},
@@ -33,3 +31,4 @@ def confirm_order():
 if __name__ == "__main__":
 
     app.run(debug=True, host='0.0.0.0') # عشان يفتح من الموبايل
+
